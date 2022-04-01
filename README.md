@@ -1,1 +1,3 @@
-# graphs
+# Graphen
+
+Beispiel-Implementierung eines Graphen.
