@@ -15,4 +15,8 @@ public class Graph<DataType> {
         }
         return result;
     }
+
+    public void add(DataType data) {
+        nodes.add(new Node<DataType>(data));
+    }
 }
