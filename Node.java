@@ -20,6 +20,9 @@ public class Node<DataType> {
 
     public String toString() {
         String result = data.toString() + "\n";
+        for (var n : neighbours) {
+            result += data.toString() + " -> " + n.data.toString() + "\n";
+        }
         return result;
     }
 }
