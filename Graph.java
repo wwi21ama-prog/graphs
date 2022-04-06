@@ -16,6 +16,14 @@ public class Graph<DataType> {
         nodes.add(new Node<DataType>(data));
     }
 
+    public void connect(DataType data1, DataType data2) {
+        var node1 = getNode(data1);
+        var node2 = getNode(data2);
+
+        node1.addNeighbour(node2);
+        node2.addNeighbour(node1);
+    }
+
     public String toString() {
         String result = "";
         for (var node : nodes) {

@@ -6,6 +6,8 @@ public class Main {
         g1.add("B");
         g1.add("C");
 
+        g1.connect("A", "C");
+
         System.out.println(g1);
     }
 }

@@ -14,6 +14,10 @@ public class Node<DataType> {
         return data;
     }
 
+    public void addNeighbour(Node<DataType> other) {
+        neighbours.add(other);
+    }
+
     public String toString() {
         String result = data.toString() + "\n";
         return result;
