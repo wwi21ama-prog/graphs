@@ -21,7 +21,6 @@ public class Graph<DataType> {
         var node2 = getNode(data2);
 
         node1.addNeighbour(node2);
-        node2.addNeighbour(node1);
     }
 
     public String toString() {
