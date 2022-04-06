@@ -8,6 +8,10 @@ public class Graph<DataType> {
         nodes = new ArrayList<>();
     }
 
+    private Node<DataType> getNode(DataType data) {
+        return nodes.stream().filter(n -> n.getData().equals(data)).findFirst().orElse(null);
+    } 
+
     public String toString() {
         String result = "";
         for (var node : nodes) {

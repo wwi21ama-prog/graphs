@@ -10,6 +10,10 @@ public class Node<DataType> {
         neighbours = new ArrayList<>();
     }
 
+    public DataType getData() {
+        return data;
+    }
+
     public String toString() {
         String result = data.toString() + "\n";
         return result;
