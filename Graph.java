@@ -30,4 +30,19 @@ public class Graph<DataType> {
         }
         return result;
     }
+
+    public boolean containsPath(DataType from, DataType to) {
+        // TODO
+        return false;
+    }
+
+    public boolean containsCycle(DataType start) {
+        // TODO
+        return false;
+    }
+
+    public int distance(DataType data1, DataType data2) {
+        // TODO
+        return -1;
+    }
 }
