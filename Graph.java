@@ -7,4 +7,12 @@ public class Graph<DataType> {
     public Graph() {
         nodes = new ArrayList<>();
     }
+
+    public String toString() {
+        String result = "";
+        for (var node : nodes) {
+            result += node.toString() + "\n";
+        }
+        return result;
+    }
 }

@@ -8,5 +8,10 @@ public class Node<DataType> {
     public Node(DataType data) {
         this.data = data;
         neighbours = new ArrayList<>();
-    }    
+    }
+
+    public String toString() {
+        String result = data.toString() + "\n";
+        return result;
+    }
 }
