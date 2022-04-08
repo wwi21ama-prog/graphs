@@ -7,23 +7,23 @@ import java.util.List;
  *  Auch diese Klasse ist generisch, d.h. der genaue Typ
  *  des Datenelements bleibt zunächst offen.
  */
-public class Node<DataType> {
-    private DataType data;
-    private List<Node<DataType>> neighbours;
+public class Node<KeyType> {
+    private KeyType data;
+    private List<Node<KeyType>> neighbours;
 
     /** Konstruktor, erstellt eien neuen Knoten. */
-    public Node(DataType data) {
+    public Node(KeyType data) {
         this.data = data;
         neighbours = new ArrayList<>();
     }
 
     /** Liefert das Datenelement dieses Knoten. */
-    public DataType getData() {
+    public KeyType getData() {
         return data;
     }
 
     /** Fügt einen Nachbarn hinzu, d.h. eine Kante im Graphen. */
-    public void addNeighbour(Node<DataType> other) {
+    public void addNeighbour(Node<KeyType> other) {
         neighbours.add(other);
     }
 

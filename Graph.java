@@ -14,10 +14,10 @@ import java.util.List;
  * zunächst offen. In den spitzen Klammern hinter dem Klassennamen ist ein Platzhalter
  * für diesen Datentyp, der vom Compiler durch den echten Datentyp ersetzt wird.
  * In der main()-Funktion wird bspw. ein Graph<String> instanziiert, dadurch wird
- * DataType hier zu String.
+ * KeyType hier zu String.
  */
-public class Graph<DataType> {
-    private List<Node<DataType>> nodes;
+public class Graph<KeyType> {
+    private List<Node<KeyType>> nodes;
 
     /** Konstruktor, erzeugt einen neuen Graphen. */
     public Graph() {
@@ -27,17 +27,17 @@ public class Graph<DataType> {
     /** liefert einen Konoten mit dem angegebenen Datenelement.
      *  Nur für den internen Gebrauch gedacht.
      */
-    private Node<DataType> getNode(DataType data) {
+    private Node<KeyType> getNode(KeyType data) {
         return nodes.stream().filter(n -> n.getData().equals(data)).findFirst().orElse(null);
     } 
 
     /** Fügt einen Knoten mit dem angegebenen Datenelement hinzu. */
-    public void add(DataType data) {
-        nodes.add(new Node<DataType>(data));
+    public void add(KeyType data) {
+        nodes.add(new Node<KeyType>(data));
     }
 
     /** Erzeugt eine Kante zwischen den Knoten mit den angegebenen Datenelementen. */
-    public void connect(DataType data1, DataType data2) {
+    public void connect(KeyType data1, KeyType data2) {
         var node1 = getNode(data1);
         var node2 = getNode(data2);
 
@@ -57,7 +57,7 @@ public class Graph<DataType> {
 
     /** Liefert true, falls es im Graphen einen Pfad zwischen den Knoten mit den
      *  angegebenen Datenelementen gibt. */
-    public boolean containsPath(DataType from, DataType to) {
+    public boolean containsPath(KeyType from, KeyType to) {
         // TODO
         return false;
     }
@@ -65,7 +65,7 @@ public class Graph<DataType> {
     /** Liefert true, falls es im Graphen einen Kreis gibt, auf dem er angegebene
      *  Knoten liegt.
      */
-    public boolean containsCycle(DataType start) {
+    public boolean containsCycle(KeyType start) {
         // TODO
         return false;
     }
@@ -73,7 +73,7 @@ public class Graph<DataType> {
     /** Liefert den Abstand zwischen den beiden Knoten mit den
      *  angegebenen Datenelementen.
      */
-    public int distance(DataType data1, DataType data2) {
+    public int distance(KeyType data1, KeyType data2) {
         // TODO
         return -1;
     }
