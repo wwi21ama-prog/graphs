@@ -55,6 +55,16 @@ public class Graph<KeyType> {
         return result;
     }
 
+    /** Entfernt den Knoten mit dem angegebenen Datenelement. */
+    void removeNode(KeyType data) {
+        // TODO
+    }
+
+    /** Entfernt die Kante zwischen den angegebenen Datenelementen. */
+    void removeEdge(KeyType data1, KeyType data2) {
+        // TODO
+    }
+
     /** Liefert true, falls es im Graphen einen Pfad zwischen den Knoten mit den
      *  angegebenen Datenelementen gibt. */
     public boolean containsPath(KeyType from, KeyType to) {
