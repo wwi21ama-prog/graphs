@@ -77,4 +77,10 @@ public class Graph<KeyType> {
         // TODO
         return -1;
     }
+
+    /** Liefert true, falls der Graph ein Baum ist. */
+    public boolean isTree() {
+        // TODO
+        return false;
+    }
 }
